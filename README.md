@@ -51,7 +51,6 @@ The following components will be released progressively:
 - [ ] Pretrained model weights
 - [ ] Pretraining dataset
 - [ ] Fine-tuning code for downstream tasks
-- [ ] Training scripts
 - [ ] More comprehensive documentation
 
 ## Notes
