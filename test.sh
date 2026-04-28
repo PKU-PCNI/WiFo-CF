@@ -22,7 +22,7 @@ scenario='null'
 num_bit=5
 python ./test.py  -e\
   --model_name 'WiFo_CF_base' \
-  --data-dir '/data1/PCNI1_data/FMMF/dataset/Mixed_Dataset_05' \
+  --data-dir './dataset/' \
   --scenario $scenario \
   --save-path ./checkpoints/null  \
   --pretrained ./checkpoints/xxx/last.pth  \
