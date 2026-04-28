@@ -1,9 +1,9 @@
 epochs=100
-bs=64  # bs = 256 is wrong, 需要去掉空格    num_workers=0 则数据会被加载到cpu中
+bs=64
 lr=1e-5
-isUL=True    # False or True
-NUM_UE_MAX=2
-NUM_UE_MIN=2
+isUL=True
+NUM_UE_MAX=1
+NUM_UE_MIN=1
 is_single_user=False
 numencoderlayers=2
 numdecoderlayers=4
@@ -22,7 +22,7 @@ scenario='null'
 num_bit=5
 python ./test.py  -e\
   --model_name 'WiFo_CF_base' \
-  --data-dir 'xxx' \
+  --data-dir '/data1/PCNI1_data/FMMF/dataset/Mixed_Dataset_05' \
   --scenario $scenario \
   --save-path ./checkpoints/null  \
   --pretrained ./checkpoints/xxx/last.pth  \
@@ -38,7 +38,7 @@ python ./test.py  -e\
   --workers 0 \
   --cr $cr \
   --scheduler 'cosine' \
-  --gpu 3 \
+  --gpu 0 \
   --is_UL_instead $isUL \
   --NUM_UE_MAX $NUM_UE_MAX \
   --NUM_UE_MIN $NUM_UE_MIN \
