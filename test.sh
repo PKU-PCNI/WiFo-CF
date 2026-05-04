@@ -18,14 +18,14 @@ d_ff_d=128
 SNR=20
 feedback_type='random'
 cr=32
-scenario='null'
+scenario='xxx'
 num_bit=5
 python ./test.py  -e\
   --model_name 'WiFo_CF_base' \
   --data-dir './dataset/' \
   --scenario $scenario \
-  --save-path ./checkpoints/null  \
-  --pretrained ./checkpoints/xxx/last.pth  \
+  --save-path ./checkpoints/xxx  \
+  --pretrained ./checkpoints/xxx  \
   --epochs $epochs \
   --d_model $d_model \
   --d_model_decoder $d_model_decoder \
