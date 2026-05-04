@@ -40,17 +40,34 @@ This heterogeneous design enables WiFo-CF to learn more generalizable channel re
 - Python packages: `pip install -r requirements.txt`
 
 
+### Evaluation
+
+After installing the dependencies, download the LH-CDF test dataset and pretrained checkpoint:
+
+- Test dataset: [LH-CDF](https://huggingface.co/datasets/PPASS/LH-CDF/tree/main/LH-CDF)
+- Pretrained checkpoint: [wifo_cf_base.pth](https://huggingface.co/datasets/PPASS/LH-CDF/blob/main/wifo_cf_base.pth)
+
+Place the `LH-CDF` dataset under `./dataset/`, or use your own channel data with the same data structure. WiFo-CF supports channel compression and reconstruction with arbitrary numbers of antennas and subcarriers.
+
+Put `wifo_cf_base.pth` in the project root directory, then run:
+
+```bash
+bash test.sh
+python get_result.py
+```
+`test.sh` runs the evaluation, and `get_result.py` summarizes the final results.
 
 ## Current Status
 At this stage, we have released:
 - [x] Model architecture code
 - [x] Testing / inference code
+- [x] Pretrained model weights
+- [x] Pretraining dataset
 
 ## TODO
 The following components will be released progressively:
-- [ ] Pretrained model weights
-- [ ] Pretraining dataset
 - [ ] Fine-tuning code for downstream tasks
+- [ ] Training scripts
 - [ ] More comprehensive documentation
 
 ## Notes
